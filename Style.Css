@@ -306,13 +306,12 @@ footer {
     font-size: large;
 }
 .bcc{
-    position: relative;
-    height: 100vh;
+    position: static;
+    height: 100%;
     width: 100%;
     color: #ffffff8f;
 }
 
-/* Fixed full-window background using a pseudo-element (more reliable than background-attachment: fixed on mobile) */
 .bcc::before{
     content: "";
     position: fixed;
@@ -327,20 +326,19 @@ footer {
 }
   
 .bcn{
-    position: relative;
-    height: 100vh;
+    position: static;
+    height: 100%;
     width: 100%;
     color: #ffffff8f;
 }
 
-/* Fixed full-window background using a pseudo-element (more reliable than background-attachment: fixed on mobile) */
 .bcn::before{
     content: "";
     position: fixed;
     inset: 0;
     background-image: url('astronomy-1867616_960_720.jpg');
     background-size: cover;
-    background-position: center;
+    background-position-y: center;
     background-repeat: no-repeat;
     z-index: -1;
     filter: brightness(0.7);
@@ -365,4 +363,12 @@ footer {
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Container2 .mb-0 {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    box-sizing: border-box;
 }
